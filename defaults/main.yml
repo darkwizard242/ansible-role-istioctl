@@ -1,0 +1,12 @@
+---
+# defaults file for istioctl
+
+istioctl_app: istioctl
+istioctl_version: 1.17.2
+istioctl_os: linux
+istioctl_arch: amd64
+istioctl_dl_url: https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istio-{{ istioctl_version }}-{{ istioctl_os }}-{{ istioctl_arch }}.tar.gz
+istioctl_bin_path: /usr/local/bin
+istioctl_file_owner: root
+istioctl_file_group: root
+istioctl_file_mode: '0755'
