@@ -1,0 +1,33 @@
+---
+galaxy_info:
+  role_name: istioctl
+  author: darkwizard242
+  description: Installs/Uninstalls 'istioctl', an open source service mesh for Kubernetes.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - focal
+        - bionic
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+        - stretch
+    - name: EL
+      versions:
+        - 8
+        - 7
+
+  galaxy_tags:
+    - istioctl
+    - istio
+    - servicemesh
+    - kubernetes
+    - linux
+    - system
+    - os
