@@ -2,7 +2,7 @@
 # defaults file for istioctl
 
 istioctl_app: istioctl
-istioctl_version: 1.17.2
+istioctl_version: 1.18.0
 istioctl_os: linux
 istioctl_arch: amd64
 istioctl_dl_url: https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istio-{{ istioctl_version }}-{{ istioctl_os }}-{{ istioctl_arch }}.tar.gz
