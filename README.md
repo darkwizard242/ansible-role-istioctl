@@ -1,4 +1,4 @@
-[![build-test](https://github.com/darkwizard242/ansible-role-istioctl/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-istioctl/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-istioctl/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-istioctl/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/61955?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/61955?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/61955?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-istioctl&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-istioctl) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-istioctl&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-istioctl) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-istioctl&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-istioctl) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-istioctl&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-istioctl) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-istioctl?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-istioctl?color=orange&style=flat-square)
+[![build-test](https://github.com/darkwizard242/ansible-role-istioctl/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-istioctl/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-istioctl/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-istioctl/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/d/darkwizard242/istioctl) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-istioctl&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-istioctl) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-istioctl&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-istioctl) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-istioctl&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-istioctl) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-istioctl?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-istioctl?color=orange&style=flat-square)
 
 # Ansible Role: istioctl
 
@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 istioctl_app: istioctl
-istioctl_version: 1.21.1
+istioctl_version: 1.21.2
 istioctl_os: linux
 istioctl_arch: amd64
 istioctl_dl_url: https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istio-{{ istioctl_version }}-{{ istioctl_os }}-{{ istioctl_arch }}.tar.gz
@@ -31,7 +31,7 @@ istioctl_file_mode: '0755'
 Variable            | Description
 ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
 istioctl_app        | Defines the app to install i.e. **istioctl**
-istioctl_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.21.1**
+istioctl_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.21.2**
 istioctl_os         | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
 istioctl_arch       | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 istioctl_dl_url     | Defines URL to download the istioctl binary from.
