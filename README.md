@@ -18,8 +18,16 @@ Available variables are listed below (located in `defaults/main.yml`):
 istioctl_app: istioctl
 istioctl_version: 1.22.1
 istioctl_os: linux
-istioctl_arch: amd64
-istioctl_dl_url: https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istio-{{ istioctl_version }}-{{ istioctl_os }}-{{ istioctl_arch }}.tar.gz
+istioctl_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+istioctl_dl_url: https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istio-{{ istioctl_version }}-{{ istioctl_os }}-{{ istioctl_architecture_map[ansible_architecture] }}.tar.gz
 istioctl_bin_path: /usr/local/bin
 istioctl_file_owner: root
 istioctl_file_group: root
@@ -28,17 +36,17 @@ istioctl_file_mode: '0755'
 
 ### Variables table:
 
-Variable            | Description
-------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
-istioctl_app        | Defines the app to install i.e. **istioctl**
-istioctl_version    | Defined to dynamically fetch the desired version to install. Defaults to: **1.22.1**
-istioctl_os         | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
-istioctl_arch       | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
-istioctl_dl_url     | Defines URL to download the istioctl binary from.
-istioctl_bin_path   | Defined to dynamically set the appropriate path to store istioctl binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
-istioctl_file_owner | Owner for the binary file of istioctl.
-istioctl_file_group | Group for the binary file of istioctl.
-istioctl_file_mode  | Mode for the binary file of istioctl.
+Variable                  | Description
+------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
+istioctl_app              | Defines the app to install i.e. **istioctl**
+istioctl_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.22.1**
+istioctl_os               | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
+istioctl_architecture_map | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture.
+istioctl_dl_url           | Defines URL to download the istioctl binary from.
+istioctl_bin_path         | Defined to dynamically set the appropriate path to store istioctl binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+istioctl_file_owner       | Owner for the binary file of istioctl.
+istioctl_file_group       | Group for the binary file of istioctl.
+istioctl_file_mode        | Mode for the binary file of istioctl.
 
 ## Dependencies
 
