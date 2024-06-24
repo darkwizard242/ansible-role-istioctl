@@ -4,8 +4,16 @@
 istioctl_app: istioctl
 istioctl_version: 1.22.1
 istioctl_os: linux
-istioctl_arch: amd64
-istioctl_dl_url: https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istio-{{ istioctl_version }}-{{ istioctl_os }}-{{ istioctl_arch }}.tar.gz
+istioctl_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+istioctl_dl_url: https://github.com/istio/istio/releases/download/{{ istioctl_version }}/istio-{{ istioctl_version }}-{{ istioctl_os }}-{{ istioctl_architecture_map[ansible_architecture] }}.tar.gz
 istioctl_bin_path: /usr/local/bin
 istioctl_file_owner: root
 istioctl_file_group: root
