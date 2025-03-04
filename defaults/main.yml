@@ -2,7 +2,7 @@
 # defaults file for istioctl
 
 istioctl_app: istioctl
-istioctl_version: 1.24.3
+istioctl_version: 1.25.0
 istioctl_os: linux
 istioctl_architecture_map:
   amd64: amd64
