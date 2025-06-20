@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 istioctl_app: istioctl
-istioctl_version: 1.26.1
+istioctl_version: 1.26.2
 istioctl_os: linux
 istioctl_architecture_map:
   amd64: amd64
@@ -39,7 +39,7 @@ istioctl_file_mode: '0755'
 Variable                  | Description
 ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
 istioctl_app              | Defines the app to install i.e. **istioctl**
-istioctl_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.26.1**
+istioctl_version          | Defined to dynamically fetch the desired version to install. Defaults to: **1.26.2**
 istioctl_os               | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
 istioctl_architecture_map | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture.
 istioctl_dl_url           | Defines URL to download the istioctl binary from.
